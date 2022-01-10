@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0 165px;
+}
+
+nav{
+    margin: 1rem 1rem 2rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .hamburger {
+        display: none;
+    }
+    .logo-content {
+        // padding-left: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo-content{
+        cursor: pointer;
+    }
+    .navbar-links {
+        // background-color: aqua;
+        margin-left: 4rem;
+        ul {
+            display: flex;
+            li {
+                margin: 0rem 1.5rem;
+                list-style: none;
+                a {
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .profile {
+        // background-color: blue;
+        width: 20%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        .cart {
+            img:hover {
+                cursor: pointer;
+            }
+        }
+        .avatar {
+            img {
+                width: 55px;
+                height: 55px;
+                border: 3px solid #ff7d1b;
+                border-radius: 50%;
+            }
+            img:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 2.5rem;
+    width: 100%;
+    .left {
+        width: 50%;
+        float: left;
+        // background: sienna;
+        .pic {
+            img {
+                width: 500px;
+                height: 500px;
+                border-radius: 15px;
+            }
+            .product2 {
+                display: none;
+            }
+            .product3 {
+                display: none;
+            }
+            .product4 {
+                display: none;
+            }
+        }
+        .thumbnails {
+            margin-top: 1.5rem;
+            padding-right: -1rem;
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 15px;
+                margin-right: 1.2rem;
+            }
+            img:hover {
+                border: 4px solid #ff7d1b;
+                opacity: .5;
+            }
+        }
+    }
+    .right {
+        width: 50%;
+        height: 550px;
+        float: right;
+        // background: seagreen;
+        padding-top: 4rem;
+        h5 {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #e19152;
+            // background-color: sienna;
+        }
+        h1 {
+            margin-top: 1.5rem;
+            font-size: 50px;
+            padding-right: 4rem;
+        }
+        p {
+            margin-top: 1.5rem;
+            font-size: 20px;
+            padding-right: 12rem;
+            color: #202028;
+        }
+        .pridis {
+            margin-top: 1.5rem;
+            .price {
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .discount {
+                border: 2px solid #ffeddc;
+                padding: .6rem;
+                background: #ffeddc;
+                color: #e19152;
+                border-radius: 10px;
+                font-weight: bold;
+            }
+        }
+        .slash {
+            margin-top: 1rem;
+            position: relative;
+            color: #a3a4a6;
+            span {
+                position: relative;
+                z-index: 1;
+            }
+            hr {
+                position: relative;
+                z-index: 2;
+                width: 55px;
+                top: -.8rem;
+            }
+        }
+        .add {
+            display: flex;
+            margin-top: 1rem;
+            height: 40px;
+            .sign {
+                border: 2px solid #d8d9dd;
+                border-radius: 10px;
+                background: #d8d9dd;
+                width: 100px;
+                padding: .6rem 1rem;
+                margin-right: 1rem;
+                font-weight: bold;
+                cursor: none;
+                .minus {
+                    padding: 0 .5rem .25rem 0rem;
+                }
+                .minus {
+                    cursor: pointer;
+                }
+                .plus {
+                    padding: 0 .5rem;
+                }
+                .plus:hover {
+                    cursor: pointer;
+                }
+            }
+            .addcart {
+                border: 2px solid #ff7d1b;
+                border-radius: 10px;
+                background-color: #ff7d1b;
+                width: 210px;
+                display: flex;
+                align-items: center;
+                padding: .5rem 1rem;
+                color: #fff;
+                img {
+                    margin-left: 1.5rem;
+                    width: 20px;
+                    height: 20px;
+                }
+                .para {
+                    // background-color: aqua;
+                    margin-left: 1rem;
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: #202028;
+                }
+            }
+            .addcart:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@import "./desktop";
+
+
+@media (max-width: 425px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    hr {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 425px;
+    }  
+    .logo-content {
+        margin-left: -2rem;
+        .hamburger {
+            display: block;
+            margin-left: 3rem;
+            img {
+                width: 25px;
+                object-fit: contain;
+            }
+        }
+        .logo {
+            margin-left: 1rem;
+        }
+    }
+    .profile {
+        margin-right: 2rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    main {
+        margin-top: -1rem;
+        width: 100%;
+        .left {
+            width: 100%;
+            .pic {
+                img {
+                    object-fit: contain;
+                    width: 423px;
+                    border-radius: 0;
+                }
+            }
+            .thumbnails {
+                display: none;
+            }
+        }
+        .right {
+            width: 100%;
+            margin-top: 1.3rem;
+            padding: 0 2rem;
+            h5 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            h1 {
+                // background: rosybrown;
+                font-size: 28px;
+                padding-right: 3rem;
+            }
+            p {
+                font-size: 16px;
+                margin-right: -8rem;
+            }
+            .pridis {
+                position: relative;
+                z-index: 4;
+            }
+            .slash {
+                position: relative;
+                z-index: 5;
+                top: -2.5rem;
+                right: -16rem;
+                span {
+                    position: relative;
+                    z-index: 8;
+                }
+                hr {
+                    position: relative;
+                    z-index: 9;
+                    top: -2.5rem;
+                    right: -16rem;
+                }
+            }
+            .add {
+                display: block;
+                width: 100%;
+                .sign {
+                    width: 100%;
+
+                }
+                .addcart {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    hr {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 375px;
+    }  
+    .logo-content {
+        margin-left: -2rem;
+        .hamburger {
+            display: block;
+            margin-left: 3rem;
+            img {
+                width: 25px;
+                object-fit: contain;
+            }
+        }
+        .logo {
+            margin-left: 1rem;
+        }
+    }
+    .profile {
+        margin-right: 2rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    main {
+        margin-top: -1rem;
+        width: 100%;
+        .left {
+            width: 100%;
+            .pic {
+                img {
+                    object-fit: contain;
+                    width: 375px;
+                    border-radius: 0;
+                }
+            }
+            .thumbnails {
+                display: none;
+            }
+        }
+        .right {
+            margin-top: 6rem;
+            width: 100%;
+            margin-top: 1.3rem;
+            padding: 0 2rem;
+            h5 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            h1 {
+                // background: rosybrown;
+                font-size: 28px;
+                padding-right: 3rem;
+            }
+            p {
+                font-size: 16px;
+                margin-right: -8rem;
+            }
+            .pridis {
+                position: relative;
+                z-index: 4;
+            }
+            .slash {
+                position: relative;
+                z-index: 5;
+                top: -2.5rem;
+                right: -16rem;
+                span {
+                    position: relative;
+                    z-index: 8;
+                }
+                hr {
+                    position: relative;
+                    z-index: 9;
+                    top: -2.5rem;
+                    right: -16rem;
+                }
+            }
+            .add {
+                display: block;
+                width: 100%;
+                .sign {
+                    width: 100%;
+
+                }
+                .addcart {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    body,html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    hr {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+    }  
+    .logo-content {
+        margin-left: -2rem;
+        .hamburger {
+            display: block;
+            margin-left: 3rem;
+            img {
+                width: 25px;
+                object-fit: contain;
+            }
+        }
+        .logo {
+            margin-left: 1rem;
+        }
+    }
+    .profile {
+        margin-right: 2rem;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    main {
+        margin-top: -2rem;
+        width: 100%;
+        .left {
+            width: 100%;
+            .pic {
+                img {
+                    object-fit: contain;
+                    width: 320px;
+                    border-radius: 0;
+                }
+            }
+            .thumbnails {
+                display: none;
+            }
+        }
+        .right {
+            width: 100%;
+            margin-top: 0rem;
+            padding: 0 2rem;
+            h5 {
+                font-size: 14px;
+                font-weight: bold;
+            }
+            h1 {
+                // background: rosybrown;
+                font-size: 28px;
+                padding-right: 3rem;
+            }
+            p {
+                font-size: 16px;
+                margin-right: -8rem;
+            }
+            .pridis {
+                position: relative;
+                z-index: 4;
+            }
+            .slash {
+                position: relative;
+                z-index: 5;
+                top: -2.5rem;
+                right: -14rem;
+                span {
+                    position: relative;
+                    z-index: 8;
+                }
+                hr {
+                    position: relative;
+                    z-index: 9;
+                    top: -2.5rem;
+                    right: -16rem;
+                }
+            }
+            .add {
+                display: block;
+                width: 100%;
+                .sign {
+                    width: 100%;
+
+                }
+                .addcart {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
